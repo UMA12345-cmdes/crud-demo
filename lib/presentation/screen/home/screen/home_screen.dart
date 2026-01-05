@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               child: notesList.isEmpty
-                  ? Center(child: Text("No Item Found"))
+                  ? Center(child: Text("No Notes Found"))
                   : listData(state),
             );
           }
@@ -195,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         SizedBox(height: 10),
         filteredNotes.isEmpty
-            ? Expanded(child: Center(child: Text("No Search Item Found")))
+            ? Expanded(child: Center(child: Text("No Searched Notes Found")))
             : Expanded(
                 child: ListView.separated(
                   shrinkWrap: true,

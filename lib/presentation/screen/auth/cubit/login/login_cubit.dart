@@ -32,6 +32,8 @@ class LoginCubit extends Cubit<LoginState> {
     } on FirebaseAuthException catch (e) {
       String message = e.message!.contains('interrupted connection')
           ? 'No internet connection. please try again'
+          : e.message!.contains('The supplied auth credential is incorrect')
+          ? 'User not found.'
           : 'Login failed ${e.message}';
       if (e.code == 'user-not-found') {
         message = 'No user found for this email';
