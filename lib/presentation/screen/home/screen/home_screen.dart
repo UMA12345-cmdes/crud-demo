@@ -31,7 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final TextEditingController title = TextEditingController();
   final TextEditingController content = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
