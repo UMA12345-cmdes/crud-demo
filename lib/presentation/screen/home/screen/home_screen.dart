@@ -22,14 +22,13 @@ class _HomeScreenState extends State<HomeScreen> {
   List notesList = [];
   List filteredNotes = [];
 
-  
-
   @override
   void initState() {
     super.initState();
     userId = FirebaseAuth.instance.currentUser?.uid ?? 'oiuy6578900';
     context.read<HomeCubit>().fetchNotes(userId);
   }
+
 
   final TextEditingController title = TextEditingController();
   final TextEditingController content = TextEditingController();
