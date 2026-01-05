@@ -22,6 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
   List notesList = [];
   List filteredNotes = [];
 
+  
+
   @override
   void initState() {
     super.initState();
